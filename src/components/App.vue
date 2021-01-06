@@ -7,11 +7,6 @@
 </div>
 </template>
 
-<style scoped>
-
-</style>
-
-
 <script>
 export default { 
   props: ["width","height","bg_c_1","bg_c_2"],
@@ -201,6 +196,7 @@ export default {
     this.contextAll.fillStyle = this.gradientAll_b;
     this.contextAll.fillRect(0,0,this.nbw,this.nbh); 
     
+
     //数字ボタンを作成
     this.font_size = this.num_height*this.font_ratio; //フォントサイズ
     this.font = `${this.font_size}px ${this.font_name}`; //フォントサイズと書体    
@@ -290,7 +286,6 @@ export default {
         num_down = false;
       }
     }   
-
 
 
     //タッチされたとき（スマホ）
