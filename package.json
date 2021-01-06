@@ -1,0 +1,21 @@
+{
+  "name": "1_2_3_All",
+  "version": "1.0.0",
+  "private": false,
+  "description": "",
+  "main": "src/library-main.js",
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yoshikatsu-Koyanagi/1_2_3_All.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yoshikatsu-Koyanagi/1_2_3_All/issues"
+  },
+  "homepage": "https://github.com/Yoshikatsu-Koyanagi/1_2_3_All#readme"
+}
+
