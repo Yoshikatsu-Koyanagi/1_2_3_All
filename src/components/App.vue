@@ -9,7 +9,7 @@
 
 <script>
 export default { 
-  props: ["width","height","bg_c_1","bg_c_2"],
+  props: ["width","height","bg_c_1","bg_c_2","bg_c_3"],
   data() {
     return {
       num_width_ratio: 0.95,
@@ -174,19 +174,25 @@ export default {
     else {
       this.bg2 = this.bg_c_2;
     }
+    if (this.bg_c_3 === undefined){
+      this.bg3 = "rgba(20,49,237,0.30)";
+    }
+    else {
+      this.bg3 = this.bg_c_3;
+    }
 
     this.gradient1_b = this.context1.createLinearGradient(0, this.nbh*0.5, this.nbw, this.nbh*0.5);
     this.gradient1_b.addColorStop(0.0 , this.bg1);
     this.gradient1_b.addColorStop(1.0 , this.bg2);
     this.gradient2_b = this.context2.createLinearGradient(0, this.nbh*0.5, this.nbw, this.nbh*0.5);
-    this.gradient2_b.addColorStop(0.0 , this.bg1);
-    this.gradient2_b.addColorStop(1.0 , this.bg2);
+    this.gradient2_b.addColorStop(0.0 , this.bg2);
+    this.gradient2_b.addColorStop(1.0 , this.bg3);
     this.gradient3_b = this.context3.createLinearGradient(0, this.nbh*0.5, this.nbw, this.nbh*0.5);
-    this.gradient3_b.addColorStop(0.0 , this.bg1);
+    this.gradient3_b.addColorStop(0.0 , this.bg3);
     this.gradient3_b.addColorStop(1.0 , this.bg2);
     this.gradientAll_b = this.contextAll.createLinearGradient(0, this.nbh*0.5, this.nbw, this.nbh*0.5);
-    this.gradientAll_b.addColorStop(0.0 , this.bg1);
-    this.gradientAll_b.addColorStop(1.0 , this.bg2);
+    this.gradientAll_b.addColorStop(0.0 , this.bg2);
+    this.gradientAll_b.addColorStop(1.0 , this.bg1);
     this.context1.fillStyle = this.gradient1_b;
     this.context1.fillRect(0,0,this.nbw,this.nbh); 
     this.context2.fillStyle = this.gradient2_b;
