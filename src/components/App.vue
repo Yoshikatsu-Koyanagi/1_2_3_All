@@ -1,10 +1,10 @@
 <template>
-<div>
-   <canvas ref="canv1" :width="width" :height="height"></canvas>
-   <canvas ref="canv2" :width="width" :height="height"></canvas>
-   <canvas ref="canv3" :width="width" :height="height"></canvas>
-   <canvas ref="canvAll" :width="width" :height="height"></canvas>
-</div>
+  <div :width="width" :height="height">
+    <canvas ref="canv1" :width="width/4" :height="height"></canvas>
+    <canvas ref="canv2" :width="width/4" :height="height"></canvas>
+    <canvas ref="canv3" :width="width/4" :height="height"></canvas>
+    <canvas ref="canvAll" :width="width/4" :height="height"></canvas>
+  </div>
 </template>
 
 <script>
@@ -285,10 +285,10 @@ export default {
     } 
 
     //マウスがキャンバス外に出た時
-    canvas2.onmouseout = (e) => {
+    canvas1.onmouseout = (e) => {
       if (touch == false) {
-        num_color2 = this.gradient2;
-        this.draw_2_btn(num_color2);
+        num_color1 = this.gradient1;
+        this.draw_1_btn(num_color1);
         num_down = false;
       }
     }   
